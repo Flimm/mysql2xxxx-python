@@ -16,7 +16,7 @@ def main():
     argparser.add_argument("--execute", required=True)
     args = argparser.parse_args()
 
-    db = MySQLdb.connect(user=args.user, password=args.password, db=args.database, charset='utf8')
+    db = MySQLdb.connect(user=args.user, passwd=args.password, db=args.database, charset='utf8')
 
     results = []
     c = db.cursor(MySQLdb.cursors.DictCursor)
